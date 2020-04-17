@@ -1,6 +1,12 @@
+/* @author: Yumurdzhan Yalmaz;*/
+package alquileres.test;
 
 import java.util.Map;
 import java.util.Set;
+
+import alquileres.modelo.AgenciaAlquiler;
+import alquileres.modelo.Coche;
+import alquileres.modelo.Furgoneta;
 
 /**
  *    
@@ -19,6 +25,10 @@ public class TestAgencia {
 		System.out.println(agencia.toString());
 		hacerPausa();
 
+	}
+
+	public TestAgencia() {
+		// TODO Auto-generated constructor stub
 	}
 
 	/**
@@ -91,6 +101,11 @@ public class TestAgencia {
 	 * inicio de la aplicación
 	 */
 	public static void main(String[] args) {
+		if (args.length != 1) {
+			System.out.println("Error en nº argumentos\n" + 
+					"Sintaxis: java TestAgencia <nombre-agencia>");
+			
+		}
 		TestAgencia test = new TestAgencia();
 
 		test.testBuscarCoches();
